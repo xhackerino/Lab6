@@ -1,0 +1,103 @@
+2022-06-02 03:02:43,495 INFO c.i.a.FileWorker [main] Environment variable not found, use the default file
+2022-06-02 03:02:43,508 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:02:43,512 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:05:05,233 INFO c.i.a.FileWorker [main] Environment variable not found, use the default file
+2022-06-02 03:05:05,242 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:05:05,248 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:08:14,175 INFO c.i.a.FileWorker [main] Environment variable not found, use the default file
+2022-06-02 03:08:14,184 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:08:14,190 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:12:48,233 INFO c.i.a.FileWorker [main] Environment variable not found, use the default file
+2022-06-02 03:12:48,242 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:12:48,247 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:13:05,496 INFO c.i.a.FileWorker [main] Environment variable not found, use the default file
+2022-06-02 03:13:05,505 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:13:05,510 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:16:38,286 INFO c.i.a.FileWorker [main] Environment variable not found, use the default file
+2022-06-02 03:16:38,295 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:16:38,300 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:17:05,661 INFO c.i.a.FileWorker [main] Environment variable not found, use the default file
+2022-06-02 03:17:05,669 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:17:05,674 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:18:38,314 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:18:38,320 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:44:28,301 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:44:28,308 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:46:54,597 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:47:08,397 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:47:08,404 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:47:12,025 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:47:28,314 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:47:28,321 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:47:54,750 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 03:47:54,757 INFO c.i.s.Main [main] Connection is established, listen port: 5000
+2022-06-02 03:48:05,640 INFO c.i.s.Server [main] Server received command help
+2022-06-02 03:48:05,640 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 03:48:11,134 INFO c.i.s.Server [main] Server received command info
+2022-06-02 03:48:11,134 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 03:49:11,317 INFO c.i.s.Server [main] Server received command add
+2022-06-02 03:49:11,318 INFO c.i.s.Server [main] Command add is completed, send an answer to the client
+2022-06-02 03:49:17,222 INFO c.i.s.Server [main] Server received command info
+2022-06-02 03:49:17,222 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 03:49:23,509 INFO c.i.s.Server [main] Server received command show
+2022-06-02 03:49:23,509 INFO c.i.s.Server [main] Command show is completed, send an answer to the client
+2022-06-02 03:49:52,284 INFO c.i.s.Server [main] Server received command help
+2022-06-02 03:49:52,285 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 03:50:14,004 INFO c.i.s.Server [main] Server received command info
+2022-06-02 03:50:14,004 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 03:50:16,535 INFO c.i.s.Server [main] Server received command info
+2022-06-02 03:50:16,536 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 03:50:20,945 INFO c.i.s.Server [main] Server received command help
+2022-06-02 03:50:20,945 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 03:52:33,517 INFO c.i.s.Server [main] Server received command info
+2022-06-02 03:52:33,518 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 03:52:41,061 INFO c.i.s.Server [main] Server received command save
+2022-06-02 03:52:41,062 INFO c.i.s.Server [main] Server received command exit
+2022-06-02 03:52:41,062 INFO c.i.s.Server [main] Command exit is completed, send an answer to the client
+2022-06-02 03:53:01,163 INFO c.i.s.Server [main] Server received command info
+2022-06-02 03:53:01,163 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 03:53:03,010 INFO c.i.s.Server [main] Server received command show
+2022-06-02 03:53:03,010 INFO c.i.s.Server [main] Command show is completed, send an answer to the client
+2022-06-02 05:12:25,465 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 05:12:44,130 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 05:13:22,895 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 05:13:38,019 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 05:13:52,102 INFO c.i.s.Server [main] Server received command help
+2022-06-02 05:13:52,103 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 05:13:54,853 INFO c.i.s.Server [main] Server received command info
+2022-06-02 05:13:54,853 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 05:14:00,358 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 05:16:08,498 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 05:16:08,505 INFO c.i.s.Main [main] Connection is established, listen port: 5334
+2022-06-02 05:17:24,103 INFO c.i.s.Server [main] Server received command info
+2022-06-02 05:17:24,103 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 05:17:51,145 INFO c.i.s.Server [main] Server received command help
+2022-06-02 05:17:51,145 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 05:18:02,098 INFO c.i.s.Server [main] Server received command help
+2022-06-02 05:18:02,098 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 05:18:05,830 INFO c.i.s.Server [main] Server received command show
+2022-06-02 05:18:05,830 INFO c.i.s.Server [main] Command show is completed, send an answer to the client
+2022-06-02 05:24:22,463 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 05:24:22,469 INFO c.i.s.Main [main] Connection is established, listen port: 5334
+2022-06-02 05:24:30,215 INFO c.i.s.Server [main] Server received command help
+2022-06-02 05:24:30,215 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 05:29:34,386 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 05:29:34,393 INFO c.i.s.Main [main] Connection is established, listen port: 545
+2022-06-02 05:30:24,925 INFO c.i.s.Server [main] Server received command info
+2022-06-02 05:30:24,926 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 05:30:30,484 INFO c.i.s.Server [main] Server received command help
+2022-06-02 05:30:30,485 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 05:31:03,841 INFO c.i.s.Server [main] Server received command help
+2022-06-02 05:31:03,841 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 05:31:07,011 INFO c.i.s.Server [main] Server received command info
+2022-06-02 05:31:07,011 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 05:31:56,375 INFO c.i.s.Server [main] Server received command info
+2022-06-02 05:31:56,375 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
+2022-06-02 05:32:21,414 INFO c.i.s.Server [main] Server received command help
+2022-06-02 05:32:21,414 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 05:46:06,756 INFO c.i.s.Main [main] Error with input file, collection is empty
+2022-06-02 05:46:06,762 INFO c.i.s.Main [main] Connection is established, listen port: 100
+2022-06-02 05:46:23,337 INFO c.i.s.Server [main] Server received command help
+2022-06-02 05:46:23,337 INFO c.i.s.Server [main] Command help is completed, send an answer to the client
+2022-06-02 05:47:21,473 INFO c.i.s.Server [main] Server received command info
+2022-06-02 05:47:21,473 INFO c.i.s.Server [main] Command info is completed, send an answer to the client
