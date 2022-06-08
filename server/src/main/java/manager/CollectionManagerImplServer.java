@@ -1,7 +1,7 @@
 package manager;
 
 import commands.base.CommandResult;
-import exception.CommandException;
+//import exception.CommandException;
 import studyGroup.*;
 
 import java.time.ZonedDateTime;
@@ -200,14 +200,14 @@ public class CollectionManagerImplServer implements CollectionManager {
      */
     @Override
     public CommandResult removeLast() {
-        try {
+//        try {
             if (studyGroup.size() > 0) {
                 studyGroup.remove(studyGroup.lastElement());
                 return new CommandResult("Last element has been removed");
-            } else throw new CommandException("Collection is already empty");
-
-        } catch(CommandException e){
-            e.printStackTrace();
+//            } else throw new CommandException("Collection is already empty");
+//
+//        } catch(CommandException e){
+//            e.printStackTrace();
         }
         return new CommandResult("");
     }

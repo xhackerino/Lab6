@@ -8,9 +8,9 @@ import commands.base.CommandResult;
 import exception.CommandException;
 import manager.CollectionManager;
 import manager.CollectionManagerImplServer;
-import manager.ConsoleManager;
+//import manager.ConsoleManager;
 import manager.FileManager;
-import studyGroup.StudyGroup;
+//import studyGroup.StudyGroup;
 
 import java.io.*;
 import java.net.*;
@@ -22,7 +22,7 @@ import static manager.ConsoleManager.print;
 
 public class Server {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        Stack<StudyGroup> sg = new Stack<>();
+//        Stack<StudyGroup> sg = new Stack<>();
         System.out.println("Server started");
         String file_name = "FILE_NAME";
         System.setOut(new PrintStream(System.out, true, "UTF-8"));
@@ -31,8 +31,8 @@ public class Server {
         }
         String fileName = System.getenv(file_name);
         FileManager fm = new FileManager(fileName);
-        Scanner scanner = new Scanner(System.in);
-        ConsoleManager consoleManager = new ConsoleManager(scanner);
+//        Scanner scanner = new Scanner(System.in);
+//        ConsoleManager consoleManager = new ConsoleManager(scanner);
         CollectionManager manager = new CollectionManagerImplServer(fm);
         HashMap<String, Command> commandHashMap = new HashMap<>();
 
@@ -57,7 +57,7 @@ public class Server {
         DatagramSocket datagramSocket = datagramChannel.socket();
         datagramSocket.bind(address);
 
-        ByteBuffer buffer = ByteBuffer.allocate(4096*4);
+        ByteBuffer buffer = ByteBuffer.allocate(4096 * 4);
 
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             try {
@@ -69,8 +69,8 @@ public class Server {
         }));
 
         while (true) {
-            String line = "";
-            String[] input;
+//            String line = "";
+//            String[] input;
             SocketAddress from = datagramChannel.receive(buffer);
             System.out.println(from);
             buffer.flip();
@@ -84,6 +84,7 @@ public class Server {
             ByteArrayInputStream bais = new ByteArrayInputStream(Base64.getMimeDecoder().decode(bytes));
             ObjectInputStream objectInputStream = new ObjectInputStream(bais);
             CommandRequestContainer inputContainer = (CommandRequestContainer) objectInputStream.readObject();
+
 
             //input = line.split(" ");
             String command = inputContainer.getCommandName();
@@ -105,9 +106,15 @@ public class Server {
                     System.err.println("Command not found");
                 }
             } catch (CommandException e) {
-                System.err.println(e.getMessage());
-            }
-        }
+                CommandResponseContainer commandResponseContainer = new CommandResponseContainer(e.getMessage());
 
+                ByteArrayOutputStream bass = new ByteArrayOutputStream();
+                ObjectOutputStream objectOutputStream = new ObjectOutputStream(bass);
+                objectOutputStream.writeObject(commandResponseContainer);
+
+                datagramChannel.send(ByteBuffer.wrap(Base64.getMimeEncoder().encode(bass.toByteArray())), from);
+            }
+
+        }
     }
 }
