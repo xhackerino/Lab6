@@ -1,19 +1,19 @@
 package commands;
 
-
 import commands.base.Command;
 import commands.base.CommandResult;
 import exception.CommandException;
 import manager.CollectionManager;
-import manager.ConsoleManager;
 
 /**
  * Команда 'clear'. Очищает коллекцию.
  */
 public class Clear implements Command {
     private final CollectionManager collectionManager;
+
     /**
      * Конструктор команды.
+     *
      * @param cm менеджер коллекции.
      */
     public Clear(CollectionManager cm) {
@@ -31,7 +31,7 @@ public class Clear implements Command {
     }
 
     @Override
-    public CommandResult execute(String[] args, String ... additionalInput) throws CommandException {
+    public CommandResult execute(String[] args, String... additionalInput) throws CommandException {
         return collectionManager.clear();
     }
 }

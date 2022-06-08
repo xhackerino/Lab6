@@ -5,7 +5,6 @@ import commands.base.CommandResult;
 import exception.CommandException;
 import manager.CollectionManager;
 
-
 /**
  * Команда 'update id'. Обновляет значение элемента коллекции, id которого равен заданному.
  */

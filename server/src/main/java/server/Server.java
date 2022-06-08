@@ -8,9 +8,8 @@ import commands.base.CommandResult;
 import exception.CommandException;
 import manager.CollectionManager;
 import manager.CollectionManagerImplServer;
-//import manager.ConsoleManager;
 import manager.FileManager;
-//import studyGroup.StudyGroup;
+
 
 import java.io.*;
 import java.net.*;
@@ -22,7 +21,7 @@ import static manager.ConsoleManager.print;
 
 public class Server {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-//        Stack<StudyGroup> sg = new Stack<>();
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Server started");
         String file_name = "FILE_NAME";
         System.setOut(new PrintStream(System.out, true, "UTF-8"));
@@ -31,8 +30,6 @@ public class Server {
         }
         String fileName = System.getenv(file_name);
         FileManager fm = new FileManager(fileName);
-//        Scanner scanner = new Scanner(System.in);
-//        ConsoleManager consoleManager = new ConsoleManager(scanner);
         CollectionManager manager = new CollectionManagerImplServer(fm);
         HashMap<String, Command> commandHashMap = new HashMap<>();
 
@@ -67,10 +64,32 @@ public class Server {
                 e.printStackTrace();
             }
         }));
+        // exit command thread
+            Thread exitThread = new Thread(() -> {
+                while (true) {
+                    try {
+                        String line = scanner.nextLine();
+                        if (line.equals("exit")) {
+                            System.exit(0);
+                        } else if (line.equals("save")) {
+                            try {
+                                commandHashMap.get("save").execute(new String[]{});
+                                System.out.println("Collection saved");
+                            } catch (CommandException e) {
+                                e.printStackTrace();
+                            }
+                        } else {
+                            System.err.println("Wrong command. You can use only 'exit' command to stop server or 'save' to save collection.");
+                        }
+                    } catch (NoSuchElementException e) {
+                        System.err.println("What are you doing? Stop that! Don't Ctrl+D my program, you are not good..." + "\n" +
+                                "Restart the program and be polite.");
+                    }
+                }
+            });
+            exitThread.start();
 
         while (true) {
-//            String line = "";
-//            String[] input;
             SocketAddress from = datagramChannel.receive(buffer);
             System.out.println(from);
             buffer.flip();
@@ -78,15 +97,10 @@ public class Server {
             byte[] bytes = new byte[buffer.remaining()];
             buffer.get(bytes);
 
-//            line = new String(bytes, StandardCharsets.UTF_8);
-//            System.out.println(line);
-
             ByteArrayInputStream bais = new ByteArrayInputStream(Base64.getMimeDecoder().decode(bytes));
             ObjectInputStream objectInputStream = new ObjectInputStream(bais);
             CommandRequestContainer inputContainer = (CommandRequestContainer) objectInputStream.readObject();
 
-
-            //input = line.split(" ");
             String command = inputContainer.getCommandName();
             buffer.clear();
 
@@ -114,7 +128,6 @@ public class Server {
 
                 datagramChannel.send(ByteBuffer.wrap(Base64.getMimeEncoder().encode(bass.toByteArray())), from);
             }
-
         }
     }
 }

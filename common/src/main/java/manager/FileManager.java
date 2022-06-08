@@ -28,18 +28,18 @@ public class FileManager {
     }
 
     private static void MakeFieldsArray(String line) {
-        String word = "";
+        StringBuilder word = new StringBuilder();
         fields = new ArrayList<>();
         keys = new ArrayList<>();
         for (int i = 0; i < line.length(); i++) {
             if (line.charAt(i) != ';') {
-                word += line.charAt(i);
+                word.append(line.charAt(i));
             } else {
-                fields.add(word);
-                word = "";
+                fields.add(word.toString());
+                word = new StringBuilder();
             }
         }
-        fields.add(word);
+        fields.add(word.toString());
     }
 
     /**
@@ -53,18 +53,13 @@ public class FileManager {
         }
         try {
             FileOutputStream fos = new FileOutputStream(fileName);
-            String stek = "ID;NAME;CREATIONDATE;STUDENTSCOUNT;EXPELLEDSTUDENTS;FORMOFEDUCATION;" +
-                    "SEMESTERENUM;PERSONNAME;PASSPORTID;EYECOLOR;NATIONALITY;X;Y\n";
+            StringBuilder stek = new StringBuilder("ID;NAME;CREATIONDATE;STUDENTSCOUNT;EXPELLEDSTUDENTS;FORMOFEDUCATION;" +
+                    "SEMESTERENUM;PERSONNAME;PASSPORTID;EYECOLOR;NATIONALITY;X;Y\n");
             for (StudyGroup StudyGroup : stack) {
-                stek += StudyGroup.getId().toString() + ";" + StudyGroup.getName() + ";" + StudyGroup.getCreationDate().toString() + ";" +
-                        StudyGroup.getStudentsCount() + ";" + StudyGroup.getExpelledStudents().toString() + ";" + StudyGroup.getFormOfEducation().toString() + ";" +
-                        StudyGroup.getSemesterEnum() + ";" + StudyGroup.getGroupAdmin().getName() + ";"
-                        + StudyGroup.getGroupAdmin().getPassportID() + ";" + StudyGroup.getGroupAdmin().getEyeColor().toString() + ";"
-                        + StudyGroup.getGroupAdmin().getNationality().toString() + ";" + StudyGroup.getCoordinates().getX().toString() + ";" +
-                        StudyGroup.getCoordinates().getY() + "\n";
+                stek.append(StudyGroup.getId().toString()).append(";").append(StudyGroup.getName()).append(";").append(StudyGroup.getCreationDate().toString()).append(";").append(StudyGroup.getStudentsCount()).append(";").append(StudyGroup.getExpelledStudents().toString()).append(";").append(StudyGroup.getFormOfEducation().toString()).append(";").append(StudyGroup.getSemesterEnum()).append(";").append(StudyGroup.getGroupAdmin().getName()).append(";").append(StudyGroup.getGroupAdmin().getPassportID()).append(";").append(StudyGroup.getGroupAdmin().getEyeColor().toString()).append(";").append(StudyGroup.getGroupAdmin().getNationality().toString()).append(";").append(StudyGroup.getCoordinates().getX().toString()).append(";").append(StudyGroup.getCoordinates().getY()).append("\n");
 
             }
-            fos.write(stek.getBytes());
+            fos.write(stek.toString().getBytes());
         } catch (IOException e) {
             printError("File not found");
         }
@@ -99,7 +94,7 @@ public class FileManager {
     }
 
     private StudyGroup studyGroupFromCSV(String line) {
-        String word = "";
+        StringBuilder word = new StringBuilder();
         Long id = null;
         String name = null;
         java.time.ZonedDateTime creationDate = null;
@@ -118,14 +113,14 @@ public class FileManager {
         Country nationality = null;
         for (int i = 0; i < line.length(); i++) {
             if (line.charAt(i) != ';') {
-                word += line.charAt(i);
+                word.append(line.charAt(i));
             } else {
-                keys.add(word);
-                word = "";
+                keys.add(word.toString());
+                word = new StringBuilder();
             }
 
         }
-        keys.add(word);
+        keys.add(word.toString());
 //        System.out.println(keys);
         for (int i = 0; i < keys.size(); i++) {
             switch (Chooser(i)) {

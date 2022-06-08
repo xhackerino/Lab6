@@ -5,7 +5,6 @@ import commands.base.CommandResult;
 import exception.CommandException;
 import manager.CollectionManager;
 
-
 /**
  * Команда 'filter_starts_with_name'. Выводит элементы коллекции, значение поля name которых начинается с заданной подстроки.
  */
@@ -16,6 +15,7 @@ public class FilterStartsWithName implements Command {
      * Конструктор класса
      * @param collectionManager объект CollectionManager
      */
+
     public FilterStartsWithName(CollectionManager collectionManager){
         this.collectionManager = collectionManager;
     }

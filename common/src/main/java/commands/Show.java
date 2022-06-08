@@ -4,7 +4,6 @@ import commands.base.Command;
 import commands.base.CommandResult;
 import exception.CommandException;
 import manager.CollectionManager;
-import manager.ConsoleManager;
 
 
 /**

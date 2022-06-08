@@ -1,13 +1,9 @@
 package commands;
 
-
 import commands.base.Command;
 import commands.base.CommandResult;
 import exception.CommandException;
 import manager.CollectionManager;
-import manager.ConsoleManager;
-
-/// я тут почудил
 
 /**
  * Команда 'add'. Добавляет новый элемент в коллекцию.

@@ -22,7 +22,7 @@ import java.util.*;
 import static manager.ConsoleManager.print;
 
 public class Client {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         boolean success = false;
         while (!success) {
             try {

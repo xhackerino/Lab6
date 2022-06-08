@@ -25,7 +25,7 @@ public class CommandManager {
     private final ConsoleManager consoleManager;
     private final Stack<String> openedScripts;
     /**
-     * Конструктор менеджера. Автоматически инициализирует объекты всех команд при создании и менеджера коллекций.
+     * Конструктор менеджера. Автоматически инициализирует объекты всех команд при создании менеджера коллекций.
      *
      * @param console    Менеджер консоли.
      * @param collection Менеджер коллекций.
@@ -44,10 +44,9 @@ public class CommandManager {
     /**
      * Метод для скрипта. Парсит все команды из файла и выполняет их.
      * @param filename имя файла.
-     * @throws IOException в случае ошибки ввода-вывода.
      * @throws Exception в случае пустого файла.
      */
-    public void ScriptMode(String filename) throws IOException, Exception {
+    public void ScriptMode(String filename) throws Exception {
         ScriptManager scriptManager = new ScriptManager(filename.trim());
         openedScripts.add(filename.trim());
         boolean isRunning = true;
@@ -105,10 +104,9 @@ public class CommandManager {
 
     /**
      * Метод для консоли. Парсит все команды из консоли и выполняет их.
-     * @throws IOException в случае ошибки ввода-вывода.
      * @throws Exception в случае пустого файла.
      */
-    public void consoleMode() throws IOException, Exception {
+    public void consoleMode() throws Exception {
         boolean isRunning = true;
         String line;
         String[] input;

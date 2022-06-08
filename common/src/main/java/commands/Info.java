@@ -6,7 +6,6 @@ import exception.CommandException;
 import manager.CollectionManager;
 
 import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 
 /**
  * Команда 'info'. Выводит информацию о коллекции.

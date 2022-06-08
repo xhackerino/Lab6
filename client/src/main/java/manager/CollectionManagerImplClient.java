@@ -57,7 +57,7 @@ public class CollectionManagerImplClient implements CollectionManager {
 
     @Override
     public long nextId() {
-        return 0;
+        return 1;
     }
 
     @Override
