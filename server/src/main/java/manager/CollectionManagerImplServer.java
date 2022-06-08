@@ -200,16 +200,11 @@ public class CollectionManagerImplServer implements CollectionManager {
      */
     @Override
     public CommandResult removeLast() {
-//        try {
-            if (studyGroup.size() > 0) {
-                studyGroup.remove(studyGroup.lastElement());
-                return new CommandResult("Last element has been removed");
-//            } else throw new CommandException("Collection is already empty");
-//
-//        } catch(CommandException e){
-//            e.printStackTrace();
-        }
-        return new CommandResult("");
+        if (studyGroup.size() > 0) {
+            studyGroup.remove(studyGroup.lastElement());
+            return new CommandResult("Last element has been removed");
+        } else
+            return new CommandResult("Collection is already empty");
     }
 
     /**
@@ -218,7 +213,7 @@ public class CollectionManagerImplServer implements CollectionManager {
     @Override
     public CommandResult removeAllGreater(int index) throws IllegalArgumentException {
         if (this.getStudyGroup().size() < index) {
-            throw new IllegalArgumentException("index must be less than the size of the collection");
+            throw new IllegalArgumentException("Index must be less than the size of the collection");
         }
         boolean success = false;
         int i = 0;

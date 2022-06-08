@@ -46,6 +46,10 @@ public class RemoveGreater implements Command {
         if (index < 0) {
             throw new CommandException("index must be non-negative");
         }
+        try {
         return collectionManager.removeAllGreater(index);
+        } catch (IllegalArgumentException e) {
+            throw new CommandException(e.getMessage());
+        }
     }
 }
